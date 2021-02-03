@@ -1,0 +1,64 @@
+.header-wrapper{
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 50px;
+ }
+.header-title{
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  line-height: 1.4;
+  letter-spacing: 0.004em;
+  text-align: center;
+}
+.header-description{
+  font-size: 16px;
+  letter-spacing: 0.004em;
+  color: #999999;
+  line-height: 1.8;
+  font-weight: 400;
+  text-align: center;
+  p{
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+}
+.header-content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 80px;
+
+}
+//Для ширины экрана от 768px и более
+@media (min-width: 620px) {
+  .header-wrapper{
+    max-width: 1480px;
+  }
+
+}
+//Для ширины экрана от 1460px и более
+@media (min-width: 1280px) {
+  .header-wrapper{
+    max-width: 1480px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 230px;
+  }
+  .header-title{
+    font-size: 70px;
+  }
+  .header-content{
+    padding-top: 212px;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+
+
+

@@ -1,0 +1,134 @@
+.video{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video__title{
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: 0.29px;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 25px;
+  text-align: center;
+  width: 100%;
+
+}
+
+.video-item{
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 80px;
+  cursor: pointer;
+  box-shadow: 15px 0 20px rgba(0,0,0,0.5);
+  &:hover{
+    box-shadow: 15px 0 30px rgba(0,0,0,0.5);
+  }
+}
+.play-icon{
+  position: relative;
+  width: 56px;
+  height: 56px;
+  background-color: white;
+  border-radius: 50px;
+  .svg{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: block;
+    margin-left: -4px;
+    margin-top: -5.5px;
+  }
+
+}
+.video-item .play-icon {
+  position: absolute;
+  left: -10px;
+  bottom: -15px;
+  cursor: pointer;
+
+  &--active, &:hover, &:focus, &:active {
+    .svg {
+      fill: #407fa2;
+    }
+  }
+}
+
+.video-center{
+  order: -1;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 15px 0 20px rgba(0,0,0,0.5);
+  margin-bottom: 30px;
+  margin-right: -20px;
+  margin-left: -20px;
+  &:hover{
+    box-shadow: 15px 0 30px rgba(0,0,0,0.5);
+  }
+}
+.video-center .play-icon{
+  position: absolute;
+  left: 24px;
+  bottom: 32px;
+}
+.video-center, .play-icon {
+  cursor: pointer;
+
+  &--active, &:hover, &:focus, &:active {
+
+    .svg {
+      fill: #407fa2;
+    }
+  }
+}
+.video-item, .play-icon {
+  cursor: pointer;
+
+  &--active, &:hover, &:focus, &:active {
+
+    .svg {
+      fill: #407fa2;
+    }
+  }
+}
+//Для ширины экрана от 768px и более
+@media (min-width: 630px) {
+  .video{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+ .video-item{
+   margin-right: 10px;
+   &:last-child{
+     margin-right: 0;
+   }
+ }
+
+
+}
+//Для ширины экрана от 1460px и более
+@media (min-width: 1280px) {
+  .video{
+    max-width: 280px;
+    margin-right: 0;
+    margin-left: 0;
+
+  }
+  .video-center{
+    order: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .video__title{
+    text-align: left;
+  }
+  .video-item{
+    margin-right: 0;
+  }
+
+}
